@@ -1,6 +1,6 @@
 <launch>
   <!-- arguments -->
-  <arg name="model"/>
+  <arg name="model" default="$(find spur_description)/robots/spur_robot.urdf.xacro"/>
   <arg name="gui" default="true" />
 
   <!-- prameters -->
@@ -9,6 +9,8 @@
 
   <!-- nodes -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
+  <!-- rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" required="true"/>
 </launch>

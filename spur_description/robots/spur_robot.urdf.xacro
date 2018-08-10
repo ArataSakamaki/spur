@@ -3,10 +3,7 @@
 
   <xacro:include filename="$(find spur_description)/urdf/base/base.urdf.xacro"/>
 
-  <!-- ___________________________link joint____________________________ -->
   <link name='base_footprint'/>
-  <xacro:base_macro parent='base_footprint'>
-    <origin xyz='0 0 0'/>
-  </xacro:base_macro>
+  <xacro:base_macro parent='base_footprint'/>
 
 </robot>
